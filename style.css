@@ -1,3 +1,128 @@
-body { font-family: sans-serif; background-color: #f4f4f4; color: #333; padding: 20px; }
-.comando { background: white; padding: 15px; margin-bottom: 10px; border-left: 5px solid #2ecc71; border-radius: 4px; }
-h1 { color: #2c3e50; }
+/* =========================
+   ESTILOS GENERALES
+========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1a001f, #120018);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,255,180,0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(0,255,170,0.15);
+}
+
+h1{
+    font-size: 3rem;
+    color: #b266ff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(178,102,255,0.7);
+}
+
+header p{
+    font-size: 1.1rem;
+    color: #9fffe0;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+#contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.comando{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(178,102,255,0.2);
+    border-radius: 18px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Línea decorativa */
+.comando::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #7b2cff, #00ffbf);
+}
+
+/* Hover */
+.comando:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 25px rgba(0,255,191,0.3);
+    border-color: #00ffbf;
+}
+
+/* =========================
+   TITULOS TARJETAS
+========================= */
+
+.comando h2{
+    color: #00ffbf;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.comando p{
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 768px){
+
+    body{
+        padding: 20px;
+    }
+
+    h1{
+        font-size: 2.2rem;
+    }
+
+    .comando{
+        padding: 20px;
+    }
+}
